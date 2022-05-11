@@ -19,14 +19,12 @@ var maxProfit = function(prices) {
     let max = 0
     let minPrice = Infinity
     for(let i = 0; i < prices.length; i++){
+        //if value is lowest we've seen, no reason to change
         if(prices[i] < minPrice){
             minPrice = prices[i]
         }
-
         let curr = prices[i] - minPrice
-        
         max = Math.max(max, curr)
-        
     }
     return max
 };
