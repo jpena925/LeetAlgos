@@ -13,13 +13,13 @@
 var inorderTraversal = function(root) {
     let arr = []
     let current = root
-    if(!current) return []
+    
     function traverse(node){
         if(node.left) traverse(node.left)
         arr.push(node.val)
         if(node.right) traverse(node.right)
     }
-    traverse(current)
+    if(current) traverse(current)
     return arr
     
 };
