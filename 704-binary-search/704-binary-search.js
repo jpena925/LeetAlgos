@@ -13,10 +13,10 @@ var search = function(nums, target) {
         } else {
             start = middle + 1
         }
+        
         middle = Math.floor((start + end) / 2)
     }
-    
-    if(nums[middle] === target){
+    if(target === nums[middle]){
         return middle
     }
     return -1
